@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+    color: white;
+    font-family: 'Inter', sans-serif;
+
+    //font-family: 'Inter', sans-serif;
+    //font-family: 'Lexend Deca', sans-serif;
+}
+
+.CONT_BASE{
+    width: 100%;
+    height: 100vh;
+    max-width: 1440px;
+    padding: 10px 0px;
+    background: rgb(29, 29, 29);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .CONTENEDOR{
+        width: 850px;
+        height: 350px;
+        //background: chartreuse;
+        margin: auto;
+        display: grid;
+        //grid-gap:10px;
+        grid-template-columns:450px 400px;
+        grid-template-rows: auto auto;
+        grid-template-areas: "BLOQUE1    BLOQUE2";
+        .BLOQUE1{
+            height: 350px;
+            //padding: 5px 0px;
+            //background: cadetblue;
+            grid-area: BLOQUE1;
+            .description{
+                height: 350px;
+                background: rgb(31, 5, 78);
+                padding:45px;
+                .title{
+                    line-height: 30px;
+                    .text{
+                        color: violet;
+                    }
+                }
+                .parrafo{
+                    margin-top: 20px;
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+                .dates{
+                    width: 350px;
+                    margin-top: 70px;
+                    //background: yellow;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    .companies{
+                        width: 100px;
+                        //background: yellowgreen;
+                        .ext{
+                            font-weight: 700;
+                        }
+                        .texttt{
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .BLOQUE2{
+            height: 350px;
+            //padding: 5px 0px;
+            //background: rgb(24, 94, 97);
+            grid-area: BLOQUE2;
+            .image{
+                width: 100%;
+                height: 100%;
+                background-image:url(../images/image-header-desktop.jpg);
+                background-size: 100% 100%;
+                .capa_image{
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(80, 8, 80, 0.541);
+                }
+            }
+        }
+    }
+    
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width:320px) and (max-width:423px){
+    .CONT_BASE{
+        width: 100%;
+        height: 180vh;
+        max-width: 423px;
+        padding: 10px 0px;
+        background: rgb(29, 29, 29);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .CONTENEDOR{
+            width:90%;
+            height: auto;
+            //padding: 10px 0px;
+            //background: chartreuse;
+            margin: auto;
+            display: grid;
+            //grid-gap:10px;
+            grid-template-columns:100% 100%;
+            grid-template-rows: auto auto;
+            grid-template-areas: "BLOQUE2"
+                                 "BLOQUE1";
+            .BLOQUE1{
+                height: auto;
+                //padding: 5px 0px;
+                //background: rgb(168, 160, 38);
+                grid-area: BLOQUE1;
+                .description{
+                    height: auto;
+                    background: rgb(31, 5, 78);
+                    padding:45px;
+                    border-radius: 0px 0px 20px 20px;
+                    .title{
+                        width: 300px;
+                        line-height: 30px;
+                        text-align: center;
+                        margin: auto;
+                        .text{
+                            color: violet;
+                        }
+                    }
+                    .parrafo{
+                        margin-top: 20px;
+                        font-weight: 400;
+                        font-size: 15px;
+                        text-align: center;
+                    }
+                    .dates{
+                        width:100px;
+                        height: 200px;
+                        margin: auto;
+                        margin-top: 70px;
+                        //background: yellow;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-align: center;
+                        .companies{
+                            width: 100px;
+                            //background: yellowgreen;
+                            .ext{
+                                font-weight: 700;
+                            }
+                            .texttt{
+                                font-weight: 400;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .BLOQUE2{
+                height: 300px;
+                //padding: 5px 0px;
+                //background: rgb(5, 48, 49);
+                grid-area: BLOQUE2;
+                .image{
+                    width: 100%;
+                    height: 100%;
+                    background-image:url(../images/image-header-desktop.jpg);
+                    background-size: 100% 100%;
+                    border-radius: 20px 20px 0px 0px;
+                    .capa_image{
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(80, 8, 80, 0.541);
+                        border-radius: 20px 20px 0px 0px;
+                    }
+                }
+            }
+        }
+        
+      
+    }
+}
